@@ -1,0 +1,64 @@
+Package: forestMIDN
+Type: Package
+Title: Package for importing, joining and querying MIDN and NCBN forest data
+Version: 1.06
+Author: Kate Miller
+Maintainer: Kate Miller <kathryn_miller@nps.gov>
+Description: This package contains functions that import database views from the MIDN forest backend and or exported CSVs from the backend and provides functions to query and summarize MIDN forest data.
+License: MIT + file LICENSE
+Depends:
+    R(>= 4.0)
+Imports: 
+    dplyr,
+    ggplot2,
+    magrittr,
+    purrr,
+    sf,
+    stringr,
+    tidyr,
+    tidyselect
+Suggests: 
+    cowplot,
+    DBI,
+    dbplyr,
+    ggrepel,
+    odbc,
+    zip
+Collate: 
+    'exportCSV.R'
+    'prepTaxa.R'
+    'joinLocEvent.R'
+    'joinTreeData.R'
+    'joinTreeVineSpecies.R'
+    'joinQuadSpecies.R'
+    'joinMicroShrubData.R'
+    'joinQuadSeedlings.R'
+    'joinMicroSaplings.R'
+    'joinCWDData.R'
+    'joinAdditionalSpecies.R'
+    'exportNPSForVeg.R'
+    'importCSV.R'
+    'importData.R'
+    'joinMicroNotes.R'
+    'joinQuadData.R'
+    'joinQuadNotes.R'
+    'joinRegenData.R'
+    'joinSoilLabData.R'
+    'joinSoilSampleData.R'
+    'joinStandData.R'
+    'joinStandDisturbance.R'
+    'joinTreeConditions.R'
+    'joinTreeFoliageCond.R'
+    'joinTreeNotes.R'
+    'joinVisitNotes.R'
+    'plotTreeGrowth.R'
+    'plotTreeMap.R'
+    'sumQuadGuilds.R'
+    'sumSapDBHDist.R'
+    'sumSpeciesList.R'
+    'sumStrStage.R'
+    'sumTreeDBHDist.R'
+    'theme_FVM.R'
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.3
