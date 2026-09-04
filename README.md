@@ -10,7 +10,7 @@ This package includes the following functions:
 <li>importData: Import views from SQL database, either through local installation (default), or by connecting to the server.</li>           
 <li>importCSV: Import views as CSVs from MIDN/NCBN forest data package.</li>             
 <li>exportCSV: Export views as CSVs.</li>             
-<li>exportNPSForVeg: Export data in a format that works with the NCRN/NCPForVeg R package.</li>       
+<li>exportNPSForVeg: Export data in a format that works with the NCRN/NPSForVeg R package.</li>       
 <li>joinLocEvent: Query plot location and event data.</li>          
 <li>joinAdditionalSpecies: Query additional species data.</li> 
 <li>joinCWDData: Query CWD volume data.</li>           
