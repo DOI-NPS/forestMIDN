@@ -17,7 +17,10 @@
 #' @description This function exports MIDN forest data that are formatted to match flat
 #' files that can be imported into the NPSForVeg R package. Abandoned plots, QAQC visits,
 #' partial visits (e.g., COLO-380-2018), and non-VS plots are not included in the export.
-#' Note the every year after 2024, the cycles code will need to be updated.
+#' 
+#' @param cycle_df Quoted path to updated Cycles.csv, which can either be updated manually,
+#' or if left blank, hard coded in function starting at line 229. 
+#' **Note the every year after 2026, either the Cycles.csv or the cycles code needs to be updated.**
 #'
 #' @param keep Logical. If TRUE (default), assigns NPSForVeg objects to global environment.
 #' If FALSE, does not return output, which is useful when export = T.
@@ -33,20 +36,20 @@
 #'
 #' @examples
 #' \dontrun{
-#' # RUN FIRST
 #' library(forestMIDN)
 #' importData()
 #' filepath <- "C:/NETN/R_Dev/data/NPSForVeg/MIDN"
 #' exportNPSForVeg(export = T, path = filepath, keep = T)
 #' exportNPSForVeg(export = T, path = filepath, keep = F)
 #' exportNPSForVeg(export = T, path = filepath, keep = F, zip = T)
+#' exportNPSForVeg(cycle_df = "./data/Cycles.csv", path = "./data/", zip = T)
 #'
 #' }
 #'
 #' @export
 #'
 
-exportNPSForVeg <- function(export = T, path = NA, zip = F, keep = T){
+exportNPSForVeg <- function(cycle_df = NA, export = T, path = NA, zip = F, keep = T){
 
   #---- Error handling ----
   stopifnot(class(export) %in% "logical")
@@ -79,6 +82,12 @@ exportNPSForVeg <- function(export = T, path = NA, zip = F, keep = T){
     if(!grepl("/$", pathn)){pathn <- paste0(pathn, "\\")}
   }
 
+  # Read in Cycles.csv and add tryCatch if not found
+  if(!is.na(cycle_df)){
+    cycles <- tryCatch(read.csv(cycle_df),
+                       error = function(e){stop("Cycles.csv not found. Please check that path and file name are correct.")})
+  }
+  
   if(export == FALSE){print("Compiling NPSForVeg data", quote = F)}
 
   maxpb = ifelse(export == FALSE, 10, 20)
@@ -221,37 +230,37 @@ exportNPSForVeg <- function(export = T, path = NA, zip = F, keep = T){
   # Cycles by park grouping
   # FRSP, PETE, RICH
   MIDN1 <- data.frame(
-    Cycle = c(1, 2, 3, 4, 5),
-    Name = c("Cycle 1", "Cycle 2", "Cycle 3", "Cycle 4", "Latest Data"),
-    YearStart = c(2007, 2011, 2015, 2019, 2021),
-    YearEnd = c(2010, 2014, 2018, 2022, 2024),
-    PanelStart = c(1, 1, 1, 1, 4)
+    Cycle = c(1, 2, 3, 4, 5, 5),
+    Name = c("Cycle 1", "Cycle 2", "Cycle 3", "Cycle 4", "Cycle 5", "Latest Data"),
+    YearStart = c(2007, 2011, 2015, 2019, 2023, 2023),
+    YearEnd = c(2010, 2014, 2018, 2022, 2026, 2026),
+    PanelStart = c(1, 1, 1, 1, 1, 1)
   )
 
   # APCO, BOWA, HOFU, GETT, VAFO
   MIDN2 <- data.frame(
     Cycle = c(1, 2, 3, 4, 5),
     Name = c("Cycle 1", "Cycle 2", "Cycle 3", "Cycle 4", "Latest Data"),
-    YearStart = c(2007, 2011, 2015, 2019, 2022),
-    YearEnd = c(2010, 2014, 2018, 2023, 2024),
-    PanelStart = c(1, 1, 1, 1, 2)
+    YearStart = c(2007, 2011, 2015, 2019, 2023),
+    YearEnd = c(2010, 2014, 2018, 2023, 2026),
+    PanelStart = c(1, 1, 1, 1, 4)
   )
 
   # GEWA, THST
   NCBN <- data.frame(
-    Cycle = c(1, 2, 3, 4, 5),
+    Cycle = c(1, 2, 3, 4, 4),
     Name = c("Cycle 1", "Cycle 2", "Cycle 3", "Cycle 4", "Latest Data"),
-    YearStart = c(2008, 2012, 2016, 2022, 2022),
-    YearEnd = c(2011, 2015, 2019, 2024, 2024),
-    PanelStart = c(1, 1, 1, 1, 1)
+    YearStart = c(2008, 2012, 2016, 2020, 2023),
+    YearEnd = c(2011, 2015, 2019, 2023, 2026),
+    PanelStart = c(2, 2, 2, 2, 1)
   )
 
   COLO <- data.frame(
     Cycle = c(1, 2, 3, 4),
     Name = c("Cycle 1", "Cycle 2", "Cycle 3", "Latest Data"),
-    YearStart = c(2011, 2015, 2019, 2022),
-    YearEnd = c(2014, 2018, 2023, 2024),
-    PanelStart = c(1, 1, 1, 2)
+    YearStart = c(2011, 2015, 2019, 2023),
+    YearEnd = c(2014, 2018, 2023, 2026),
+    PanelStart = c(1, 1, 1, 4)
   )
 
   SAHI <- data.frame(
@@ -265,25 +274,25 @@ exportNPSForVeg <- function(export = T, path = NA, zip = F, keep = T){
   ASIS <- data.frame(
     Cycle = c(1, 2),
     Name = c("Cycle 1", "Latest Data"),
-    YearStart = c(2019, 2019),
-    YearEnd = c(2024, 2024),
-    PanelStart = c(1, 1)
+    YearStart = c(2019, 2023),
+    YearEnd = c(2024, 2026),
+    PanelStart = c(1, 3)
   )
 
   cycles <- rbind(
-    data.frame(Unit_Code = rep("APCO", 5), MIDN2),
-    data.frame(Unit_Code = rep("ASIS", 2), ASIS),
-    data.frame(Unit_Code = rep("BOWA", 5), MIDN2),
-    data.frame(Unit_Code = rep("COLO", 4), COLO),
-    data.frame(Unit_Code = rep("FRSP", 5), MIDN1),
-    data.frame(Unit_Code = rep("GETT", 5), MIDN2),
-    data.frame(Unit_Code = rep("GEWA", 5), NCBN),
-    data.frame(Unit_Code = rep("HOFU", 5), MIDN2),
-    data.frame(Unit_Code = rep("PETE", 5), MIDN1),
-    data.frame(Unit_Code = rep("RICH", 5), MIDN1),
-    data.frame(Unit_Code = rep("SAHI", 5), SAHI),
-    data.frame(Unit_Code = rep("THST", 5), NCBN),
-    data.frame(Unit_Code = rep("VAFO", 5), MIDN2)
+    data.frame(Unit_Code = rep("APCO", nrow(MIDN2)), MIDN2),
+    data.frame(Unit_Code = rep("ASIS", nrow(ASIS)), ASIS),
+    data.frame(Unit_Code = rep("BOWA", nrow(MIDN2)), MIDN2),
+    data.frame(Unit_Code = rep("COLO", nrow(COLO)), COLO),
+    data.frame(Unit_Code = rep("FRSP", nrow(MIDN1)), MIDN1),
+    data.frame(Unit_Code = rep("GETT", nrow(MIDN2)), MIDN2),
+    data.frame(Unit_Code = rep("GEWA", nrow(NCBN)), NCBN),
+    data.frame(Unit_Code = rep("HOFU", nrow(MIDN2)), MIDN2),
+    data.frame(Unit_Code = rep("PETE", nrow(MIDN1)), MIDN1),
+    data.frame(Unit_Code = rep("RICH", nrow(MIDN1)), MIDN1),
+    data.frame(Unit_Code = rep("SAHI", nrow(SAHI)), SAHI),
+    data.frame(Unit_Code = rep("THST", nrow(NCBN)), NCBN),
+    data.frame(Unit_Code = rep("VAFO", nrow(MIDN2)), MIDN2)
   )
 
   #---- CommonNames ----

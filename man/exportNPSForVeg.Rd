@@ -4,9 +4,13 @@
 \alias{exportNPSForVeg}
 \title{exportNPSForVeg}
 \usage{
-exportNPSForVeg(export = T, path = NA, zip = F, keep = T)
+exportNPSForVeg(cycle_df = NA, export = T, path = NA, zip = F, keep = T)
 }
 \arguments{
+\item{cycle_df}{Quoted path to updated Cycles.csv, which can either be updated manually,
+or if left blank, hard coded in function starting at line 229. 
+**Note the every year after 2026, either the Cycles.csv or the cycles code needs to be updated.**}
+
 \item{export}{Logical. If TRUE (default), saves formatted csvs to specified path.}
 
 \item{path}{Quoted path to save files to. If not specified, will save to working directory.}
@@ -24,17 +28,16 @@ NPSForVeg flatfiles
 This function exports MIDN forest data that are formatted to match flat
 files that can be imported into the NPSForVeg R package. Abandoned plots, QAQC visits,
 partial visits (e.g., COLO-380-2018), and non-VS plots are not included in the export.
-Note the every year after 2024, the cycles code will need to be updated.
 }
 \examples{
 \dontrun{
-# RUN FIRST
 library(forestMIDN)
 importData()
 filepath <- "C:/NETN/R_Dev/data/NPSForVeg/MIDN"
 exportNPSForVeg(export = T, path = filepath, keep = T)
 exportNPSForVeg(export = T, path = filepath, keep = F)
 exportNPSForVeg(export = T, path = filepath, keep = F, zip = T)
+exportNPSForVeg(cycle_df = "./data/Cycles.csv", path = "./data/", zip = T)
 
 }
 
