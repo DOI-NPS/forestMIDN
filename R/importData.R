@@ -3,10 +3,9 @@
 #' @description This function imports all views in the ANALYSIS schema of the MIDN_Forest backend. Each view
 #' is added to a VIEWS_MIDN_NCBN environment in your workspace, or to your global environment based on whether
 #' new_env = TRUE or FALSE. You must have the latest ODBC SQL driver installed for this function to
-#' work. It can be downloaded from: https://go.microsoft.com/fwlink/?linkid=2168524
+#' work. 
 #'
 #' @importFrom dplyr collect rename tbl
-#' @importFrom magrittr %>%
 #'
 #' @param instance Specify whether you are connecting to the local instance or server.
 #' \describe{
@@ -26,9 +25,6 @@
 #' \dontrun{
 #' # Import using default settings of local instance, server = 'localhost' and add VIEWS_MIDN_NCBN environment
 #' importData()
-#'
-#' # Import using computer name (# should be real numbers)
-#' importData(server = "INPNETN-######", new_env = TRUE)
 #'
 #' # Import from main database on server
 #' importData(server = "INP###########\\########", instance = "server", new_env = TRUE)
@@ -55,10 +51,6 @@ importData <- function(instance = c("local", "server"), server = "localhost", na
 
   if(!requireNamespace("dbplyr", quietly = TRUE)){
     stop("Package 'dbplyr' needed for this function to work. Please install it.", call. = FALSE)
-  }
-
-  if(!requireNamespace("sf", quietly = TRUE)){
-    stop("Package 'sf' needed for this function to work. Please install it.", call. = FALSE)
   }
 
   # Set up connection
@@ -96,7 +88,7 @@ importData <- function(instance = c("local", "server"), server = "localhost", na
   view_import <- lapply(seq_along(view_list_db), function(x){
     setTxtProgressBar(pb, x)
     view <- view_list_db[x]
-    tab <- tbl(con, dbplyr::in_schema("ANALYSIS", view)) %>% collect() %>%
+    tab <- tbl(con, dbplyr::in_schema("ANALYSIS", view)) |> collect() |>
       as.data.frame()
     return(tab)
   })
@@ -119,35 +111,6 @@ importData <- function(instance = c("local", "server"), server = "localhost", na
     list2env(view_import, envir = VIEWS_MIDN_NCBN)
   } else {
     list2env(view_import, envir = .GlobalEnv)}
-
-  # Add Lat/Long to Plots_MIDN_NCBN
-  env <- if(exists("VIEWS_MIDN_NCBN")){VIEWS_MIDN_NCBN} else {.GlobalEnv}
-  plots <- get("Plots_MIDN_NCBN", envir = env)
-
-  plots_sf18 <- plots |> filter(ZoneCode == "18N") |>
-    select(Plot_Name, xCoordinate, yCoordinate) |>
-    sf::st_as_sf(coords = c("xCoordinate", "yCoordinate"), crs = 26918) |>
-    sf::st_transform(crs = 4326)
-
-  plots_sf17 <- plots |> filter(ZoneCode == "17N") |>
-    select(Plot_Name, xCoordinate, yCoordinate) |>
-    sf::st_as_sf(coords = c("xCoordinate", "yCoordinate"), crs = 26917) |>
-    sf::st_transform(crs = 4326)
-
-  plots_18 <- data.frame(Plot_Name = plots_sf18$Plot_Name,
-                         Long = sf::st_coordinates(plots_sf18)[,1],
-                         Lat = sf::st_coordinates(plots_sf18)[,2])
-
-  plots_17 <- data.frame(Plot_Name = plots_sf17$Plot_Name,
-                         Long = sf::st_coordinates(plots_sf17)[,1],
-                         Lat = sf::st_coordinates(plots_sf17)[,2])
-
-  plots_wgs1 <- rbind(plots_18, plots_17)
-
-  plot_wgs <- left_join(plots, plots_wgs1, by = "Plot_Name")
-
-  if(new_env == TRUE){VIEWS_MIDN_NCBN$Plots_MIDN_NCBN <- plot_wgs
-  } else Plots_MIDN_NCBN <- plotwgs
 
   print(ifelse(new_env == TRUE, paste0("Import complete. Views are located in VIEWS_MIDN_NCBN environment."),
                paste0("Import complete. Views are located in global environment.")), quote = FALSE)

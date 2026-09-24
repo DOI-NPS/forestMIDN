@@ -3,7 +3,7 @@
     "name": "forestMIDN",
     "organization": "NATIONAL PARK SERVICE",
     "description": "R package for importing, joining and querying Mid-Atlantic Network and Northeast Coastal and Barrier Network forest data"
-    "version": "1.06",
+    "version": "1.07",
     "status": "ongoing development",
     "permissions": {
       "usageType": "openSource",

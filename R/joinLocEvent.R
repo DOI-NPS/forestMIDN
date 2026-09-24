@@ -2,7 +2,6 @@
 #'
 #' @importFrom dplyr filter full_join select
 #' @importFrom stringr str_pad
-#' @importFrom magrittr %>%
 #'
 #' @description This function combines location and event data. Must run importData first.
 #'
@@ -67,7 +66,7 @@
 #' # Select data from plots that had a QA/QC event in GETT in 2019
 #' GETT_data <- joinLocEvent(park = 'GETT', QAQC = TRUE, from = 2019)
 #' QAQC_plots <- GETT_data$Plot_Name[which(GETT_data$Event_QAQC == TRUE)]
-#' GETT_QAQC <- GETT_data %>% filter(Plot_Name %in% QAQC_plots)
+#' GETT_QAQC <- GETT_data |>  filter(Plot_Name %in% QAQC_plots)
 #' }
 #'
 #' @export
@@ -105,9 +104,9 @@ joinLocEvent<-function(park = "all", from = 2007, to = as.numeric(format(Sys.Dat
   )
 
   # Merge COMN_Plots and COMN_Events
-  plots <- plots %>% select(-ExportDate)
+  plots <- plots |> select(-ExportDate)
 
-  events <- events %>% select(-ExportDate)
+  events <- events |> select(-ExportDate)
 
   # Hack for practice plots that aren't in a panel. Assigns to first selected panel
   plots$PanelCode[plots$PanelCode == "NA"] <- as.character(panels[1])
@@ -117,7 +116,7 @@ joinLocEvent<-function(park = "all", from = 2007, to = as.numeric(format(Sys.Dat
   # merge_names: "Network", "ParkUnit", "ParkSubUnit", "PlotTypeCode", "PlotTypeLabel",
   # "PanelCode", "PanelLabel", "PlotCode", "IsAbandoned"
 
-  plot_events <- full_join(plots, events, by = merge_names) %>% data.frame()
+  plot_events <- full_join(plots, events, by = merge_names) |> data.frame()
 
   if(nrow(plot_events) == 0){stop("Function returned 0 rows. Check that park and years specified contain visits.")}
 

@@ -83,7 +83,7 @@ cycle3 <- joinLocEvent(park = c("RICH", "FRSP"), from = 2015, to = 2018) # all p
 # Select data from plots that had a QA/QC event in GETT in 2019
 GETT_data <- joinLocEvent(park = 'GETT', QAQC = TRUE, from = 2019)
 QAQC_plots <- GETT_data$Plot_Name[which(GETT_data$Event_QAQC == TRUE)]
-GETT_QAQC <- GETT_data \%>\% filter(Plot_Name \%in\% QAQC_plots)
+GETT_QAQC <- GETT_data |>  filter(Plot_Name \%in\% QAQC_plots)
 }
 
 }
