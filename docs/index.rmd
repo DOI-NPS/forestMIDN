@@ -261,7 +261,7 @@ Compiles any notes written about the microplots.
 <p class='fxn'>View sapling data for most recent survey of plots in GETT</p>
 ```{r}
 gett <- joinMicroNotes(park = "GETT", from = 2023, to = 2026)
-head(gett)
+print_head(gett)
 ```
 
 #### joinMicroShrubData
@@ -321,7 +321,7 @@ Compiles notes recorded in quadrats.
 <p class='fxn'>View quadrat notes for the most recent survey of plots in HOFU</p>
 ```{r}
 hofu <- joinQuadNotes(park = "HOFU", from = 2023, to = 2026)
-head(hofu)
+print_head(hofu)
 ```
 
 #### joinSoilLabData
@@ -353,13 +353,13 @@ Compiles data collected at the stand level that may help identify groups or cova
 <p class='fxn'>View stand data for plots in GEWA from all years.</p>
 ```{r}
 gewa_stnd <- joinStandData(park = "GEWA")
-head(gewa_stnd)
+print_head(gewa_stnd[,c(1:26, 30:ncol(gewa_stnd))]) # dropping notes fields
 ```
 
 <p class='fxn'>View stand data for plots in FRSP from most recent survey of plots.</p>
 ```{r}
 FRSP_stnd4 <- joinStandData(park = "FRSP", from = 2023, to = 2026) 
-head(FRSP_stnd4)
+print_head(FRSP_stnd4)
 ```
 
 #### joinStandDisturbance

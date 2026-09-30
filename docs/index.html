@@ -5500,63 +5500,199 @@ Compiles any notes written about the microplots.
 View sapling data for most recent survey of plots in GETT
 </p>
 <pre class="r"><code>gett &lt;- joinMicroNotes(park = &quot;GETT&quot;, from = 2023, to = 2026)
-head(gett)</code></pre>
-<pre><code>##   Plot_Name
-## 1  GETT-031
-## 2  GETT-031
-## 3  GETT-031
-## 4  GETT-031
-## 5  GETT-031
-## 6  GETT-031
-##   PlotID
-## 1    247
-## 2    247
-## 3    247
-## 4    247
-## 5    247
-## 6    247
-##   EventID
-## 1    1586
-## 2    1586
-## 3    1586
-## 4    1586
-## 5    1586
-## 6    1586
-##   SampleYear
-## 1       2024
-## 2       2024
-## 3       2024
-## 4       2024
-## 5       2024
-## 6       2024
-##   IsQAQC
-## 1  FALSE
-## 2  FALSE
-## 3  FALSE
-## 4  FALSE
-## 5  FALSE
-## 6  FALSE
-##       Note_Type
-## 1 Micro_Sapling
-## 2 Micro_Sapling
-## 3 Micro_Sapling
-## 4 Micro_Sapling
-## 5 Micro_Sapling
-## 6 Micro_Sapling
-##                 Sample_Info
-## 1  Microplot: B; Tag: 18415
-## 2 Microplot: UL; Tag: 17029
-## 3 Microplot: UL; Tag: 18410
-## 4 Microplot: UL; Tag: 18412
-## 5 Microplot: UL; Tag: 18413
-## 6 Microplot: UL; Tag: 18414
-##                                                                                                                                    Notes
-## 1                                                                                                                           true recruit
-## 2                                                                                                                  inlcudes lon jap vine
-## 3                                                                                          this sapling was accidentally created 3 times
-## 4             Is getting full sun and it&#39;s been 5 years since last sampling but still seems to big to be a recruit. on edge of microplot
-## 5                                                                                                                   on edge of microplot
-## 6 Old tag number: 13945; 20240909 CES: GETT EPMT said they treated AILALT on this plot after the 2024 sample - this sap may now be dead.</code></pre>
+print_head(gett)</code></pre>
+<div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:900px; ">
+<table class=" lightable-classic" style="font-size: 12px; color: black; font-family: &quot;Arial Narrow&quot;, &quot;Source Sans Pro&quot;, sans-serif; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Plot_Name
+</th>
+<th style="text-align:right;">
+PlotID
+</th>
+<th style="text-align:right;">
+EventID
+</th>
+<th style="text-align:right;">
+SampleYear
+</th>
+<th style="text-align:left;">
+IsQAQC
+</th>
+<th style="text-align:left;">
+Note_Type
+</th>
+<th style="text-align:left;">
+Sample_Info
+</th>
+<th style="text-align:left;">
+Notes
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+GETT-031
+</td>
+<td style="text-align:right;">
+247
+</td>
+<td style="text-align:right;">
+1586
+</td>
+<td style="text-align:right;">
+2024
+</td>
+<td style="text-align:left;">
+FALSE
+</td>
+<td style="text-align:left;">
+Micro_Sapling
+</td>
+<td style="text-align:left;">
+Microplot: B; Tag: 18415
+</td>
+<td style="text-align:left;">
+true recruit
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GETT-031
+</td>
+<td style="text-align:right;">
+247
+</td>
+<td style="text-align:right;">
+1586
+</td>
+<td style="text-align:right;">
+2024
+</td>
+<td style="text-align:left;">
+FALSE
+</td>
+<td style="text-align:left;">
+Micro_Sapling
+</td>
+<td style="text-align:left;">
+Microplot: UL; Tag: 17029
+</td>
+<td style="text-align:left;">
+inlcudes lon jap vine
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GETT-031
+</td>
+<td style="text-align:right;">
+247
+</td>
+<td style="text-align:right;">
+1586
+</td>
+<td style="text-align:right;">
+2024
+</td>
+<td style="text-align:left;">
+FALSE
+</td>
+<td style="text-align:left;">
+Micro_Sapling
+</td>
+<td style="text-align:left;">
+Microplot: UL; Tag: 18410
+</td>
+<td style="text-align:left;">
+this sapling was accidentally created 3 times
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GETT-031
+</td>
+<td style="text-align:right;">
+247
+</td>
+<td style="text-align:right;">
+1586
+</td>
+<td style="text-align:right;">
+2024
+</td>
+<td style="text-align:left;">
+FALSE
+</td>
+<td style="text-align:left;">
+Micro_Sapling
+</td>
+<td style="text-align:left;">
+Microplot: UL; Tag: 18412
+</td>
+<td style="text-align:left;">
+Is getting full sun and it’s been 5 years since last sampling but still
+seems to big to be a recruit. on edge of microplot
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GETT-031
+</td>
+<td style="text-align:right;">
+247
+</td>
+<td style="text-align:right;">
+1586
+</td>
+<td style="text-align:right;">
+2024
+</td>
+<td style="text-align:left;">
+FALSE
+</td>
+<td style="text-align:left;">
+Micro_Sapling
+</td>
+<td style="text-align:left;">
+Microplot: UL; Tag: 18413
+</td>
+<td style="text-align:left;">
+on edge of microplot
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GETT-031
+</td>
+<td style="text-align:right;">
+247
+</td>
+<td style="text-align:right;">
+1586
+</td>
+<td style="text-align:right;">
+2024
+</td>
+<td style="text-align:left;">
+FALSE
+</td>
+<td style="text-align:left;">
+Micro_Sapling
+</td>
+<td style="text-align:left;">
+Microplot: UL; Tag: 18414
+</td>
+<td style="text-align:left;">
+Old tag number: 13945; 20240909 CES: GETT EPMT said they treated AILALT
+on this plot after the 2024 sample - this sap may now be dead.
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div id="joinmicroshrubdata" class="section level4">
 <h4>joinMicroShrubData</h4>
@@ -10734,39 +10870,385 @@ Compiles notes recorded in quadrats.
 View quadrat notes for the most recent survey of plots in HOFU
 </p>
 <pre class="r"><code>hofu &lt;- joinQuadNotes(park = &quot;HOFU&quot;, from = 2023, to = 2026)
-head(hofu)</code></pre>
-<pre><code>##   Plot_Name
-## 1  HOFU-083
-##   Network
-## 1    MIDN
-##   ParkUnit
-## 1     HOFU
-##   ParkSubUnit
-## 1        HOFU
-##   PlotTypeCode
-## 1           VS
-##   PanelCode
-## 1         2
-##   PlotCode
-## 1       83
-##   PlotID
-## 1    127
-##   EventID
-## 1    1677
-##   SampleYear
-## 1       2025
-##   cycle
-## 1     5
-##   IsQAQC
-## 1  FALSE
-##      Note_Type
-## 1 Quad_Species
-##   Sample_Info
-## 1        &lt;NA&gt;
-##   Note_Info
-## 1   Juglans
-##            Notes
-## 1 just coming up</code></pre>
+print_head(hofu)</code></pre>
+<div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:900px; ">
+<table class=" lightable-classic" style="font-size: 12px; color: black; font-family: &quot;Arial Narrow&quot;, &quot;Source Sans Pro&quot;, sans-serif; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+Plot_Name
+</th>
+<th style="text-align:left;">
+Network
+</th>
+<th style="text-align:left;">
+ParkUnit
+</th>
+<th style="text-align:left;">
+ParkSubUnit
+</th>
+<th style="text-align:left;">
+PlotTypeCode
+</th>
+<th style="text-align:left;">
+PanelCode
+</th>
+<th style="text-align:right;">
+PlotCode
+</th>
+<th style="text-align:right;">
+PlotID
+</th>
+<th style="text-align:right;">
+EventID
+</th>
+<th style="text-align:right;">
+SampleYear
+</th>
+<th style="text-align:right;">
+cycle
+</th>
+<th style="text-align:left;">
+IsQAQC
+</th>
+<th style="text-align:left;">
+Note_Type
+</th>
+<th style="text-align:left;">
+Sample_Info
+</th>
+<th style="text-align:left;">
+Note_Info
+</th>
+<th style="text-align:left;">
+Notes
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+HOFU-083
+</td>
+<td style="text-align:left;">
+MIDN
+</td>
+<td style="text-align:left;">
+HOFU
+</td>
+<td style="text-align:left;">
+HOFU
+</td>
+<td style="text-align:left;">
+VS
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:right;">
+83
+</td>
+<td style="text-align:right;">
+127
+</td>
+<td style="text-align:right;">
+1677
+</td>
+<td style="text-align:right;">
+2025
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+FALSE
+</td>
+<td style="text-align:left;">
+Quad_Species
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Juglans
+</td>
+<td style="text-align:left;">
+just coming up
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NA.1
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NA.2
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NA.3
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NA.4
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div id="joinsoillabdata" class="section level4">
 <h4>joinSoilLabData</h4>
@@ -13244,684 +13726,2009 @@ plots.</p>
 View stand data for plots in GEWA from all years.
 </p>
 <pre class="r"><code>gewa_stnd &lt;- joinStandData(park = &quot;GEWA&quot;)
-head(gewa_stnd)</code></pre>
-<pre><code>##   Plot_Name
-## 1  GEWA-143
-## 2  GEWA-143
-## 3  GEWA-143
-## 4  GEWA-143
-## 5  GEWA-143
-## 6  GEWA-144
-##   Network
-## 1    NCBN
-## 2    NCBN
-## 3    NCBN
-## 4    NCBN
-## 5    NCBN
-## 6    NCBN
-##   ParkUnit
-## 1     GEWA
-## 2     GEWA
-## 3     GEWA
-## 4     GEWA
-## 5     GEWA
-## 6     GEWA
-##   ParkSubUnit
-## 1        GEWA
-## 2        GEWA
-## 3        GEWA
-## 4        GEWA
-## 5        GEWA
-## 6        GEWA
-##   PlotTypeCode
-## 1           VS
-## 2           VS
-## 3           VS
-## 4           VS
-## 5           VS
-## 6           VS
-##   PanelCode
-## 1         2
-## 2         2
-## 3         2
-## 4         2
-## 5         2
-## 6         2
-##   PlotCode
-## 1      143
-## 2      143
-## 3      143
-## 4      143
-## 5      143
-## 6      144
-##   PlotID
-## 1    336
-## 2    336
-## 3    336
-## 4    336
-## 5    336
-## 6    350
-##   xCoordinate
-## 1      331599
-## 2      331599
-## 3      331599
-## 4      331599
-## 5      331599
-## 6      331846
-##   yCoordinate
-## 1     4229051
-## 2     4229051
-## 3     4229051
-## 4     4229051
-## 5     4229051
-## 6     4228796
-##   EventID
-## 1    1055
-## 2    1056
-## 3    1057
-## 4    1249
-## 5    1633
-## 6    1096
-##   SampleDate
-## 1 2008-09-11
-## 2 2012-08-23
-## 3 2016-09-06
-## 4 2021-08-31
-## 5 2024-08-22
-## 6 2008-09-11
-##   SampleYear
-## 1       2008
-## 2       2012
-## 3       2016
-## 4       2021
-## 5       2024
-## 6       2008
-##   cycle
-## 1     1
-## 2     2
-## 3     3
-## 4     4
-## 5     5
-## 6     1
-##   IsQAQC
-## 1  FALSE
-## 2  FALSE
-## 3  FALSE
-## 4  FALSE
-## 5  FALSE
-## 6  FALSE
-##   Stand_Structure
-## 1      Multi-aged
-## 2      Multi-aged
-## 3      Multi-aged
-## 4      Multi-aged
-## 5      Multi-aged
-## 6      Multi-aged
-##   Stand_Structure_Code
-## 1                    3
-## 2                    3
-## 3                    3
-## 4                    3
-## 5                    3
-## 6                    3
-##   Pct_Crown_Closure
-## 1              62.5
-## 2              62.5
-## 3              62.5
-## 4              87.5
-## 5              87.5
-## 6              62.5
-##   CrownClosureCode
-## 1                4
-## 2                4
-## 3                4
-## 4                5
-## 5                5
-## 6                4
-##   Txt_Crown_Closure
-## 1            50-75%
-## 2            50-75%
-## 3            50-75%
-## 4           75-100%
-## 5           75-100%
-## 6            50-75%
-##   Deer_Browse_Index
-## 1                NA
-## 2                 4
-## 3                 4
-## 4                 4
-## 5                 5
-## 6                NA
-##   Microtopography
-## 1               1
-## 2               1
-## 3               1
-## 4               1
-## 5               1
-## 6               1
-##   Water_on_Plot_Code
-## 1                  0
-## 2                  0
-## 3                  3
-## 4                  3
-## 5                  3
-## 6                  0
-##   Water_on_Plot
-## 1          None
-## 2          None
-## 3   Ditch/canal
-## 4   Ditch/canal
-## 5   Ditch/canal
-## 6          None
-##   Weather_Photo
-## 1        Clouds
-## 2           Sun
-## 3           Sun
-## 4           Sun
-## 5           Sun
-## 6        Clouds
-##   PhotoNotes
-## 1  panasonic
-## 2       &lt;NA&gt;
-## 3       &lt;NA&gt;
-## 4       &lt;NA&gt;
-## 5       &lt;NA&gt;
-## 6  panasonic
-##                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             StandNotes
-## 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ~100 m from maintenance complex; can park there (road to maintenance complex is maybe 3rd road on right?)
-## 2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Ditches in several areas of the plot, and disturbed soils.
-## 3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 &lt;NA&gt;
-## 4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       UC is directly beneath fallen Prunus. Only rebar in UL corner because corner is in mowed area.
-## 5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Accidently added sap #18300 ILE OPA in UR, but forked with a tree and does not meet forking rules, so it was deleted. 2028 crew: please ignore paint and remove tag if present.
-## 6 Turn L (NW) @ obelisk (monument) @ park entrance; turn R on road marked &#39;Private  Road&#39; &#39;530/532&#39; (perhaps second road on right after picnic area); park near cable gate on L side of road aprox. 1/2 mile up road.                                                                                                                                                                                                                                                 Most understory foliage within dear-browse height is ILEOPA (evidence of deer pressure or just normal in this forest type? Also male box turtle probably &gt; 25 years old in plot. 2 trees outside plot painted in error — Ilex opaca DBH 10.8, and nysyl DBH 14.4
-##   PlotSlope
-## 1       0.8
-## 2       1.8
-## 3       0.4
-## 4       0.9
-## 5       0.4
-## 6       0.2
-##   Pct_Understory_Low
-## 1               15.0
-## 2               15.0
-## 3               37.5
-## 4               37.5
-## 5               15.0
-## 6                3.0
-##   Txt_Understory_Low
-## 1              5-25%
-## 2              5-25%
-## 3             25-50%
-## 4             25-50%
-## 5              5-25%
-## 6               1-5%
-##   Pct_Understory_Mid
-## 1               37.5
-## 2               37.5
-## 3               37.5
-## 4               37.5
-## 5               15.0
-## 6               15.0
-##   Txt_Understory_Mid
-## 1             25-50%
-## 2             25-50%
-## 3             25-50%
-## 4             25-50%
-## 5              5-25%
-## 6              5-25%
-##   Pct_Understory_High
-## 1                15.0
-## 2                62.5
-## 3                37.5
-## 4                62.5
-## 5                37.5
-## 6                 3.0
-##   Txt_Understory_High
-## 1               5-25%
-## 2              50-75%
-## 3              25-50%
-## 4              50-75%
-## 5              25-50%
-## 6                1-5%
-##   Pct_Bare_Soil
-## 1             3
-## 2             3
-## 3             0
-## 4             0
-## 5             0
-## 6             0
-##   Txt_Bare_Soil
-## 1          1-5%
-## 2          1-5%
-## 3            0%
-## 4            0%
-## 5            0%
-## 6            0%
-##   Pct_Bryophyte
-## 1             0
-## 2             0
-## 3             0
-## 4             0
-## 5             0
-## 6             0
-##   Txt_Bryophyte
-## 1            0%
-## 2            0%
-## 3            0%
-## 4            0%
-## 5            0%
-## 6            0%
-##   Pct_Lichen
-## 1         NA
-## 2          0
-## 3          0
-## 4          0
-## 5          0
-## 6         NA
-##      Txt_Lichen
-## 1 Not Collected
-## 2            0%
-## 3            0%
-## 4            0%
-## 5            0%
-## 6 Not Collected
-##   Pct_Rock
-## 1        0
-## 2        0
-## 3        0
-## 4        0
-## 5        0
-## 6        0
-##   Txt_Rock
-## 1       0%
-## 2       0%
-## 3       0%
-## 4       0%
-## 5       0%
-## 6       0%
-##   Pct_Trampled
-## 1            0
-## 2            0
-## 3            0
-## 4            0
-## 5            0
-## 6            0
-##   Txt_Trampled
-## 1           0%
-## 2           0%
-## 3           0%
-## 4           0%
-## 5           0%
-## 6           0%
-##   Pct_Water
-## 1        NA
-## 2         0
-## 3         0
-## 4         0
-## 5         0
-## 6        NA
-##       Txt_Water
-## 1 Not Collected
-## 2            0%
-## 3            0%
-## 4            0%
-## 5            0%
-## 6 Not Collected
-##   Avg_Height_Codom
-## 1         28.90000
-## 2         29.73333
-## 3         26.26667
-## 4         33.85000
-## 5         31.10000
-## 6         26.90000
-##   Avg_Height_Inter
-## 1               NA
-## 2               NA
-## 3         18.95000
-## 4         27.73333
-## 5         25.43333
-## 6               NA</code></pre>
+print_head(gewa_stnd[,c(1:26, 30:ncol(gewa_stnd))]) # dropping notes fields</code></pre>
+<div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:900px; ">
+<table class=" lightable-classic" style="font-size: 12px; color: black; font-family: &quot;Arial Narrow&quot;, &quot;Source Sans Pro&quot;, sans-serif; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Plot_Name
+</th>
+<th style="text-align:left;">
+Network
+</th>
+<th style="text-align:left;">
+ParkUnit
+</th>
+<th style="text-align:left;">
+ParkSubUnit
+</th>
+<th style="text-align:left;">
+PlotTypeCode
+</th>
+<th style="text-align:left;">
+PanelCode
+</th>
+<th style="text-align:right;">
+PlotCode
+</th>
+<th style="text-align:right;">
+PlotID
+</th>
+<th style="text-align:right;">
+xCoordinate
+</th>
+<th style="text-align:right;">
+yCoordinate
+</th>
+<th style="text-align:right;">
+EventID
+</th>
+<th style="text-align:left;">
+SampleDate
+</th>
+<th style="text-align:right;">
+SampleYear
+</th>
+<th style="text-align:right;">
+cycle
+</th>
+<th style="text-align:left;">
+IsQAQC
+</th>
+<th style="text-align:left;">
+Stand_Structure
+</th>
+<th style="text-align:left;">
+Stand_Structure_Code
+</th>
+<th style="text-align:right;">
+Pct_Crown_Closure
+</th>
+<th style="text-align:left;">
+CrownClosureCode
+</th>
+<th style="text-align:left;">
+Txt_Crown_Closure
+</th>
+<th style="text-align:right;">
+Deer_Browse_Index
+</th>
+<th style="text-align:left;">
+Microtopography
+</th>
+<th style="text-align:left;">
+Water_on_Plot_Code
+</th>
+<th style="text-align:left;">
+Water_on_Plot
+</th>
+<th style="text-align:left;">
+Weather_Photo
+</th>
+<th style="text-align:left;">
+PhotoNotes
+</th>
+<th style="text-align:left;">
+Txt_Understory_Low
+</th>
+<th style="text-align:right;">
+Pct_Understory_Mid
+</th>
+<th style="text-align:left;">
+Txt_Understory_Mid
+</th>
+<th style="text-align:right;">
+Pct_Understory_High
+</th>
+<th style="text-align:left;">
+Txt_Understory_High
+</th>
+<th style="text-align:right;">
+Pct_Bare_Soil
+</th>
+<th style="text-align:left;">
+Txt_Bare_Soil
+</th>
+<th style="text-align:right;">
+Pct_Bryophyte
+</th>
+<th style="text-align:left;">
+Txt_Bryophyte
+</th>
+<th style="text-align:right;">
+Pct_Lichen
+</th>
+<th style="text-align:left;">
+Txt_Lichen
+</th>
+<th style="text-align:right;">
+Pct_Rock
+</th>
+<th style="text-align:left;">
+Txt_Rock
+</th>
+<th style="text-align:right;">
+Pct_Trampled
+</th>
+<th style="text-align:left;">
+Txt_Trampled
+</th>
+<th style="text-align:right;">
+Pct_Water
+</th>
+<th style="text-align:left;">
+Txt_Water
+</th>
+<th style="text-align:right;">
+Avg_Height_Codom
+</th>
+<th style="text-align:right;">
+Avg_Height_Inter
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+GEWA-143
+</td>
+<td style="text-align:left;">
+NCBN
+</td>
+<td style="text-align:left;">
+GEWA
+</td>
+<td style="text-align:left;">
+GEWA
+</td>
+<td style="text-align:left;">
+VS
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:right;">
+143
+</td>
+<td style="text-align:right;">
+336
+</td>
+<td style="text-align:right;">
+331599
+</td>
+<td style="text-align:right;">
+4229051
+</td>
+<td style="text-align:right;">
+1055
+</td>
+<td style="text-align:left;">
+2008-09-11
+</td>
+<td style="text-align:right;">
+2008
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+FALSE
+</td>
+<td style="text-align:left;">
+Multi-aged
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:right;">
+62.5
+</td>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+50-75%
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+None
+</td>
+<td style="text-align:left;">
+Clouds
+</td>
+<td style="text-align:left;">
+panasonic
+</td>
+<td style="text-align:left;">
+5-25%
+</td>
+<td style="text-align:right;">
+37.5
+</td>
+<td style="text-align:left;">
+25-50%
+</td>
+<td style="text-align:right;">
+15.0
+</td>
+<td style="text-align:left;">
+5-25%
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+1-5%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+Not Collected
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+Not Collected
+</td>
+<td style="text-align:right;">
+28.90000
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GEWA-143
+</td>
+<td style="text-align:left;">
+NCBN
+</td>
+<td style="text-align:left;">
+GEWA
+</td>
+<td style="text-align:left;">
+GEWA
+</td>
+<td style="text-align:left;">
+VS
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:right;">
+143
+</td>
+<td style="text-align:right;">
+336
+</td>
+<td style="text-align:right;">
+331599
+</td>
+<td style="text-align:right;">
+4229051
+</td>
+<td style="text-align:right;">
+1056
+</td>
+<td style="text-align:left;">
+2012-08-23
+</td>
+<td style="text-align:right;">
+2012
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+FALSE
+</td>
+<td style="text-align:left;">
+Multi-aged
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:right;">
+62.5
+</td>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+50-75%
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+None
+</td>
+<td style="text-align:left;">
+Sun
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+5-25%
+</td>
+<td style="text-align:right;">
+37.5
+</td>
+<td style="text-align:left;">
+25-50%
+</td>
+<td style="text-align:right;">
+62.5
+</td>
+<td style="text-align:left;">
+50-75%
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+1-5%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+29.73333
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GEWA-143
+</td>
+<td style="text-align:left;">
+NCBN
+</td>
+<td style="text-align:left;">
+GEWA
+</td>
+<td style="text-align:left;">
+GEWA
+</td>
+<td style="text-align:left;">
+VS
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:right;">
+143
+</td>
+<td style="text-align:right;">
+336
+</td>
+<td style="text-align:right;">
+331599
+</td>
+<td style="text-align:right;">
+4229051
+</td>
+<td style="text-align:right;">
+1057
+</td>
+<td style="text-align:left;">
+2016-09-06
+</td>
+<td style="text-align:right;">
+2016
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+FALSE
+</td>
+<td style="text-align:left;">
+Multi-aged
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:right;">
+62.5
+</td>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+50-75%
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+Ditch/canal
+</td>
+<td style="text-align:left;">
+Sun
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+25-50%
+</td>
+<td style="text-align:right;">
+37.5
+</td>
+<td style="text-align:left;">
+25-50%
+</td>
+<td style="text-align:right;">
+37.5
+</td>
+<td style="text-align:left;">
+25-50%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+26.26667
+</td>
+<td style="text-align:right;">
+18.95000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GEWA-143
+</td>
+<td style="text-align:left;">
+NCBN
+</td>
+<td style="text-align:left;">
+GEWA
+</td>
+<td style="text-align:left;">
+GEWA
+</td>
+<td style="text-align:left;">
+VS
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:right;">
+143
+</td>
+<td style="text-align:right;">
+336
+</td>
+<td style="text-align:right;">
+331599
+</td>
+<td style="text-align:right;">
+4229051
+</td>
+<td style="text-align:right;">
+1249
+</td>
+<td style="text-align:left;">
+2021-08-31
+</td>
+<td style="text-align:right;">
+2021
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+FALSE
+</td>
+<td style="text-align:left;">
+Multi-aged
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:right;">
+87.5
+</td>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+75-100%
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+Ditch/canal
+</td>
+<td style="text-align:left;">
+Sun
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+25-50%
+</td>
+<td style="text-align:right;">
+37.5
+</td>
+<td style="text-align:left;">
+25-50%
+</td>
+<td style="text-align:right;">
+62.5
+</td>
+<td style="text-align:left;">
+50-75%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+33.85000
+</td>
+<td style="text-align:right;">
+27.73333
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GEWA-143
+</td>
+<td style="text-align:left;">
+NCBN
+</td>
+<td style="text-align:left;">
+GEWA
+</td>
+<td style="text-align:left;">
+GEWA
+</td>
+<td style="text-align:left;">
+VS
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:right;">
+143
+</td>
+<td style="text-align:right;">
+336
+</td>
+<td style="text-align:right;">
+331599
+</td>
+<td style="text-align:right;">
+4229051
+</td>
+<td style="text-align:right;">
+1633
+</td>
+<td style="text-align:left;">
+2024-08-22
+</td>
+<td style="text-align:right;">
+2024
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+FALSE
+</td>
+<td style="text-align:left;">
+Multi-aged
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:right;">
+87.5
+</td>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+75-100%
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+Ditch/canal
+</td>
+<td style="text-align:left;">
+Sun
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+5-25%
+</td>
+<td style="text-align:right;">
+15.0
+</td>
+<td style="text-align:left;">
+5-25%
+</td>
+<td style="text-align:right;">
+37.5
+</td>
+<td style="text-align:left;">
+25-50%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+31.10000
+</td>
+<td style="text-align:right;">
+25.43333
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GEWA-144
+</td>
+<td style="text-align:left;">
+NCBN
+</td>
+<td style="text-align:left;">
+GEWA
+</td>
+<td style="text-align:left;">
+GEWA
+</td>
+<td style="text-align:left;">
+VS
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:right;">
+144
+</td>
+<td style="text-align:right;">
+350
+</td>
+<td style="text-align:right;">
+331846
+</td>
+<td style="text-align:right;">
+4228796
+</td>
+<td style="text-align:right;">
+1096
+</td>
+<td style="text-align:left;">
+2008-09-11
+</td>
+<td style="text-align:right;">
+2008
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+FALSE
+</td>
+<td style="text-align:left;">
+Multi-aged
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:right;">
+62.5
+</td>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+50-75%
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+None
+</td>
+<td style="text-align:left;">
+Clouds
+</td>
+<td style="text-align:left;">
+panasonic
+</td>
+<td style="text-align:left;">
+1-5%
+</td>
+<td style="text-align:right;">
+15.0
+</td>
+<td style="text-align:left;">
+5-25%
+</td>
+<td style="text-align:right;">
+3.0
+</td>
+<td style="text-align:left;">
+1-5%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+Not Collected
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+Not Collected
+</td>
+<td style="text-align:right;">
+26.90000
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p class="fxn">
 View stand data for plots in FRSP from most recent survey of plots.
 </p>
 <pre class="r"><code>FRSP_stnd4 &lt;- joinStandData(park = &quot;FRSP&quot;, from = 2023, to = 2026) 
-head(FRSP_stnd4)</code></pre>
-<pre><code>##   Plot_Name
-## 1  FRSP-001
-## 2  FRSP-002
-## 3  FRSP-003
-## 4  FRSP-008
-## 5  FRSP-013
-## 6  FRSP-014
-##   Network
-## 1    MIDN
-## 2    MIDN
-## 3    MIDN
-## 4    MIDN
-## 5    MIDN
-## 6    MIDN
-##   ParkUnit
-## 1     FRSP
-## 2     FRSP
-## 3     FRSP
-## 4     FRSP
-## 5     FRSP
-## 6     FRSP
-##   ParkSubUnit
-## 1   FRSP_FRED
-## 2   FRSP_FRED
-## 3   FRSP_FRED
-## 4   FRSP_FRED
-## 5   FRSP_FRED
-## 6   FRSP_FRED
-##   PlotTypeCode
-## 1           VS
-## 2           VS
-## 3           VS
-## 4           VS
-## 5           VS
-## 6           VS
-##   PanelCode
-## 1         1
-## 2         1
-## 3         1
-## 4         1
-## 5         1
-## 6         1
-##   PlotCode
-## 1        1
-## 2        2
-## 3        3
-## 4        8
-## 5       13
-## 6       14
-##   PlotID
-## 1     18
-## 2    220
-## 3    156
-## 4    248
-## 5    268
-## 6    333
-##   xCoordinate
-## 1      284595
-## 2      285600
-## 3      285604
-## 4      286355
-## 5      287101
-## 6      285093
-##   yCoordinate
-## 1     4237044
-## 2     4237050
-## 3     4237299
-## 4     4236051
-## 5     4236049
-## 6     4236293
-##   EventID
-## 1    1530
-## 2    1527
-## 3    1526
-## 4    1542
-## 5    1535
-## 6    1537
-##   SampleDate
-## 1 2023-08-29
-## 2 2023-08-23
-## 3 2023-08-23
-## 4 2023-08-29
-## 5 2023-08-30
-## 6 2023-08-29
-##   SampleYear
-## 1       2023
-## 2       2023
-## 3       2023
-## 4       2023
-## 5       2023
-## 6       2023
-##   cycle
-## 1     5
-## 2     5
-## 3     5
-## 4     5
-## 5     5
-## 6     5
-##   IsQAQC
-## 1  FALSE
-## 2  FALSE
-## 3  FALSE
-## 4  FALSE
-## 5  FALSE
-## 6  FALSE
-##   Stand_Structure
-## 1      Multi-aged
-## 2      Multi-aged
-## 3      Multi-aged
-## 4      Multi-aged
-## 5      Multi-aged
-## 6      Multi-aged
-##   Stand_Structure_Code
-## 1                    3
-## 2                    3
-## 3                    3
-## 4                    3
-## 5                    3
-## 6                    3
-##   Pct_Crown_Closure
-## 1              37.5
-## 2              62.5
-## 3              62.5
-## 4              87.5
-## 5              37.5
-## 6              62.5
-##   CrownClosureCode
-## 1                3
-## 2                4
-## 3                4
-## 4                5
-## 5                3
-## 6                4
-##   Txt_Crown_Closure
-## 1            25-50%
-## 2            50-75%
-## 3            50-75%
-## 4           75-100%
-## 5            25-50%
-## 6            50-75%
-##   Deer_Browse_Index
-## 1                 4
-## 2                 5
-## 3                 3
-## 4                 5
-## 5                 3
-## 6                 3
-##   Microtopography
-## 1               0
-## 2               0
-## 3               1
-## 4               0
-## 5               0
-## 6               0
-##   Water_on_Plot_Code
-## 1                  0
-## 2                  0
-## 3                  4
-## 4                  0
-## 5                  0
-## 6                  0
-##       Water_on_Plot
-## 1              None
-## 2              None
-## 3 Temporary streams
-## 4              None
-## 5              None
-## 6              None
-##   Weather_Photo
-## 1        Clouds
-## 2           Sun
-## 3           Sun
-## 4           Sun
-## 5           Sun
-## 6          Rain
-##   PhotoNotes
-## 1       &lt;NA&gt;
-## 2       &lt;NA&gt;
-## 3       &lt;NA&gt;
-## 4       &lt;NA&gt;
-## 5       &lt;NA&gt;
-## 6       &lt;NA&gt;
-##                                                          StandNotes
-## 1                                                              &lt;NA&gt;
-## 2 Down trees across 25-50% of plot, but no trees landed on a stake.
-## 3                                                              &lt;NA&gt;
-## 4                    BL reset , tape run on left side of tree #1773
-## 5                                                              &lt;NA&gt;
-## 6                                                              &lt;NA&gt;
-##   PlotSlope
-## 1       1.3
-## 2       0.5
-## 3       1.1
-## 4       3.1
-## 5       0.6
-## 6       1.4
-##   Pct_Understory_Low
-## 1               37.5
-## 2               15.0
-## 3               37.5
-## 4               37.5
-## 5               85.0
-## 6               62.5
-##   Txt_Understory_Low
-## 1             25-50%
-## 2              5-25%
-## 3             25-50%
-## 4             25-50%
-## 5             75-95%
-## 6             50-75%
-##   Pct_Understory_Mid
-## 1               15.0
-## 2               37.5
-## 3               15.0
-## 4                3.0
-## 5               37.5
-## 6               62.5
-##   Txt_Understory_Mid
-## 1              5-25%
-## 2             25-50%
-## 3              5-25%
-## 4               1-5%
-## 5             25-50%
-## 6             50-75%
-##   Pct_Understory_High
-## 1                15.0
-## 2                37.5
-## 3                15.0
-## 4                37.5
-## 5                37.5
-## 6                37.5
-##   Txt_Understory_High
-## 1               5-25%
-## 2              25-50%
-## 3               5-25%
-## 4              25-50%
-## 5              25-50%
-## 6              25-50%
-##   Pct_Bare_Soil
-## 1             3
-## 2             3
-## 3             0
-## 4             0
-## 5             0
-## 6             0
-##   Txt_Bare_Soil
-## 1          1-5%
-## 2          1-5%
-## 3            0%
-## 4            0%
-## 5            0%
-## 6            0%
-##   Pct_Bryophyte
-## 1             0
-## 2             0
-## 3             0
-## 4             0
-## 5             0
-## 6             0
-##   Txt_Bryophyte
-## 1            0%
-## 2            0%
-## 3            0%
-## 4            0%
-## 5            0%
-## 6            0%
-##   Pct_Lichen
-## 1          0
-## 2          0
-## 3          0
-## 4          0
-## 5          0
-## 6          0
-##   Txt_Lichen
-## 1         0%
-## 2         0%
-## 3         0%
-## 4         0%
-## 5         0%
-## 6         0%
-##   Pct_Rock
-## 1        0
-## 2        0
-## 3        0
-## 4        0
-## 5        0
-## 6        0
-##   Txt_Rock
-## 1       0%
-## 2       0%
-## 3       0%
-## 4       0%
-## 5       0%
-## 6       0%
-##   Pct_Trampled
-## 1            0
-## 2            0
-## 3            0
-## 4            0
-## 5            0
-## 6            0
-##   Txt_Trampled
-## 1           0%
-## 2           0%
-## 3           0%
-## 4           0%
-## 5           0%
-## 6           0%
-##   Pct_Water
-## 1         0
-## 2         0
-## 3         0
-## 4         0
-## 5         0
-## 6         0
-##   Txt_Water
-## 1        0%
-## 2        0%
-## 3        0%
-## 4        0%
-## 5        0%
-## 6        0%
-##   Avg_Height_Codom
-## 1         26.80000
-## 2         31.33333
-## 3         31.40000
-## 4         28.13333
-## 5         23.80000
-## 6         29.50000
-##   Avg_Height_Inter
-## 1         19.33333
-## 2         21.75000
-## 3               NA
-## 4         15.13333
-## 5         16.60000
-## 6         20.70000</code></pre>
+print_head(FRSP_stnd4)</code></pre>
+<div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:900px; ">
+<table class=" lightable-classic" style="font-size: 12px; color: black; font-family: &quot;Arial Narrow&quot;, &quot;Source Sans Pro&quot;, sans-serif; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Plot_Name
+</th>
+<th style="text-align:left;">
+Network
+</th>
+<th style="text-align:left;">
+ParkUnit
+</th>
+<th style="text-align:left;">
+ParkSubUnit
+</th>
+<th style="text-align:left;">
+PlotTypeCode
+</th>
+<th style="text-align:left;">
+PanelCode
+</th>
+<th style="text-align:right;">
+PlotCode
+</th>
+<th style="text-align:right;">
+PlotID
+</th>
+<th style="text-align:right;">
+xCoordinate
+</th>
+<th style="text-align:right;">
+yCoordinate
+</th>
+<th style="text-align:right;">
+EventID
+</th>
+<th style="text-align:left;">
+SampleDate
+</th>
+<th style="text-align:right;">
+SampleYear
+</th>
+<th style="text-align:right;">
+cycle
+</th>
+<th style="text-align:left;">
+IsQAQC
+</th>
+<th style="text-align:left;">
+Stand_Structure
+</th>
+<th style="text-align:left;">
+Stand_Structure_Code
+</th>
+<th style="text-align:right;">
+Pct_Crown_Closure
+</th>
+<th style="text-align:left;">
+CrownClosureCode
+</th>
+<th style="text-align:left;">
+Txt_Crown_Closure
+</th>
+<th style="text-align:right;">
+Deer_Browse_Index
+</th>
+<th style="text-align:left;">
+Microtopography
+</th>
+<th style="text-align:left;">
+Water_on_Plot_Code
+</th>
+<th style="text-align:left;">
+Water_on_Plot
+</th>
+<th style="text-align:left;">
+Weather_Photo
+</th>
+<th style="text-align:left;">
+PhotoNotes
+</th>
+<th style="text-align:left;">
+StandNotes
+</th>
+<th style="text-align:right;">
+PlotSlope
+</th>
+<th style="text-align:right;">
+Pct_Understory_Low
+</th>
+<th style="text-align:left;">
+Txt_Understory_Low
+</th>
+<th style="text-align:right;">
+Pct_Understory_Mid
+</th>
+<th style="text-align:left;">
+Txt_Understory_Mid
+</th>
+<th style="text-align:right;">
+Pct_Understory_High
+</th>
+<th style="text-align:left;">
+Txt_Understory_High
+</th>
+<th style="text-align:right;">
+Pct_Bare_Soil
+</th>
+<th style="text-align:left;">
+Txt_Bare_Soil
+</th>
+<th style="text-align:right;">
+Pct_Bryophyte
+</th>
+<th style="text-align:left;">
+Txt_Bryophyte
+</th>
+<th style="text-align:right;">
+Pct_Lichen
+</th>
+<th style="text-align:left;">
+Txt_Lichen
+</th>
+<th style="text-align:right;">
+Pct_Rock
+</th>
+<th style="text-align:left;">
+Txt_Rock
+</th>
+<th style="text-align:right;">
+Pct_Trampled
+</th>
+<th style="text-align:left;">
+Txt_Trampled
+</th>
+<th style="text-align:right;">
+Pct_Water
+</th>
+<th style="text-align:left;">
+Txt_Water
+</th>
+<th style="text-align:right;">
+Avg_Height_Codom
+</th>
+<th style="text-align:right;">
+Avg_Height_Inter
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+FRSP-001
+</td>
+<td style="text-align:left;">
+MIDN
+</td>
+<td style="text-align:left;">
+FRSP
+</td>
+<td style="text-align:left;">
+FRSP_FRED
+</td>
+<td style="text-align:left;">
+VS
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:right;">
+284595
+</td>
+<td style="text-align:right;">
+4237044
+</td>
+<td style="text-align:right;">
+1530
+</td>
+<td style="text-align:left;">
+2023-08-29
+</td>
+<td style="text-align:right;">
+2023
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+FALSE
+</td>
+<td style="text-align:left;">
+Multi-aged
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:right;">
+37.5
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+25-50%
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+None
+</td>
+<td style="text-align:left;">
+Clouds
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+1.3
+</td>
+<td style="text-align:right;">
+37.5
+</td>
+<td style="text-align:left;">
+25-50%
+</td>
+<td style="text-align:right;">
+15.0
+</td>
+<td style="text-align:left;">
+5-25%
+</td>
+<td style="text-align:right;">
+15.0
+</td>
+<td style="text-align:left;">
+5-25%
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+1-5%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+26.80000
+</td>
+<td style="text-align:right;">
+19.33333
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FRSP-002
+</td>
+<td style="text-align:left;">
+MIDN
+</td>
+<td style="text-align:left;">
+FRSP
+</td>
+<td style="text-align:left;">
+FRSP_FRED
+</td>
+<td style="text-align:left;">
+VS
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+220
+</td>
+<td style="text-align:right;">
+285600
+</td>
+<td style="text-align:right;">
+4237050
+</td>
+<td style="text-align:right;">
+1527
+</td>
+<td style="text-align:left;">
+2023-08-23
+</td>
+<td style="text-align:right;">
+2023
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+FALSE
+</td>
+<td style="text-align:left;">
+Multi-aged
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:right;">
+62.5
+</td>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+50-75%
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+None
+</td>
+<td style="text-align:left;">
+Sun
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Down trees across 25-50% of plot, but no trees landed on a stake.
+</td>
+<td style="text-align:right;">
+0.5
+</td>
+<td style="text-align:right;">
+15.0
+</td>
+<td style="text-align:left;">
+5-25%
+</td>
+<td style="text-align:right;">
+37.5
+</td>
+<td style="text-align:left;">
+25-50%
+</td>
+<td style="text-align:right;">
+37.5
+</td>
+<td style="text-align:left;">
+25-50%
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+1-5%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+31.33333
+</td>
+<td style="text-align:right;">
+21.75000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FRSP-003
+</td>
+<td style="text-align:left;">
+MIDN
+</td>
+<td style="text-align:left;">
+FRSP
+</td>
+<td style="text-align:left;">
+FRSP_FRED
+</td>
+<td style="text-align:left;">
+VS
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+156
+</td>
+<td style="text-align:right;">
+285604
+</td>
+<td style="text-align:right;">
+4237299
+</td>
+<td style="text-align:right;">
+1526
+</td>
+<td style="text-align:left;">
+2023-08-23
+</td>
+<td style="text-align:right;">
+2023
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+FALSE
+</td>
+<td style="text-align:left;">
+Multi-aged
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:right;">
+62.5
+</td>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+50-75%
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+Temporary streams
+</td>
+<td style="text-align:left;">
+Sun
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+1.1
+</td>
+<td style="text-align:right;">
+37.5
+</td>
+<td style="text-align:left;">
+25-50%
+</td>
+<td style="text-align:right;">
+15.0
+</td>
+<td style="text-align:left;">
+5-25%
+</td>
+<td style="text-align:right;">
+15.0
+</td>
+<td style="text-align:left;">
+5-25%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+31.40000
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FRSP-008
+</td>
+<td style="text-align:left;">
+MIDN
+</td>
+<td style="text-align:left;">
+FRSP
+</td>
+<td style="text-align:left;">
+FRSP_FRED
+</td>
+<td style="text-align:left;">
+VS
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+248
+</td>
+<td style="text-align:right;">
+286355
+</td>
+<td style="text-align:right;">
+4236051
+</td>
+<td style="text-align:right;">
+1542
+</td>
+<td style="text-align:left;">
+2023-08-29
+</td>
+<td style="text-align:right;">
+2023
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+FALSE
+</td>
+<td style="text-align:left;">
+Multi-aged
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:right;">
+87.5
+</td>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+75-100%
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+None
+</td>
+<td style="text-align:left;">
+Sun
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+BL reset , tape run on left side of tree #1773
+</td>
+<td style="text-align:right;">
+3.1
+</td>
+<td style="text-align:right;">
+37.5
+</td>
+<td style="text-align:left;">
+25-50%
+</td>
+<td style="text-align:right;">
+3.0
+</td>
+<td style="text-align:left;">
+1-5%
+</td>
+<td style="text-align:right;">
+37.5
+</td>
+<td style="text-align:left;">
+25-50%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+28.13333
+</td>
+<td style="text-align:right;">
+15.13333
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FRSP-013
+</td>
+<td style="text-align:left;">
+MIDN
+</td>
+<td style="text-align:left;">
+FRSP
+</td>
+<td style="text-align:left;">
+FRSP_FRED
+</td>
+<td style="text-align:left;">
+VS
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+268
+</td>
+<td style="text-align:right;">
+287101
+</td>
+<td style="text-align:right;">
+4236049
+</td>
+<td style="text-align:right;">
+1535
+</td>
+<td style="text-align:left;">
+2023-08-30
+</td>
+<td style="text-align:right;">
+2023
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+FALSE
+</td>
+<td style="text-align:left;">
+Multi-aged
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:right;">
+37.5
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+25-50%
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+None
+</td>
+<td style="text-align:left;">
+Sun
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+0.6
+</td>
+<td style="text-align:right;">
+85.0
+</td>
+<td style="text-align:left;">
+75-95%
+</td>
+<td style="text-align:right;">
+37.5
+</td>
+<td style="text-align:left;">
+25-50%
+</td>
+<td style="text-align:right;">
+37.5
+</td>
+<td style="text-align:left;">
+25-50%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+23.80000
+</td>
+<td style="text-align:right;">
+16.60000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FRSP-014
+</td>
+<td style="text-align:left;">
+MIDN
+</td>
+<td style="text-align:left;">
+FRSP
+</td>
+<td style="text-align:left;">
+FRSP_FRED
+</td>
+<td style="text-align:left;">
+VS
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:right;">
+333
+</td>
+<td style="text-align:right;">
+285093
+</td>
+<td style="text-align:right;">
+4236293
+</td>
+<td style="text-align:right;">
+1537
+</td>
+<td style="text-align:left;">
+2023-08-29
+</td>
+<td style="text-align:right;">
+2023
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+FALSE
+</td>
+<td style="text-align:left;">
+Multi-aged
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:right;">
+62.5
+</td>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+50-75%
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+None
+</td>
+<td style="text-align:left;">
+Rain
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+1.4
+</td>
+<td style="text-align:right;">
+62.5
+</td>
+<td style="text-align:left;">
+50-75%
+</td>
+<td style="text-align:right;">
+62.5
+</td>
+<td style="text-align:left;">
+50-75%
+</td>
+<td style="text-align:right;">
+37.5
+</td>
+<td style="text-align:left;">
+25-50%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+0%
+</td>
+<td style="text-align:right;">
+29.50000
+</td>
+<td style="text-align:right;">
+20.70000
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div id="joinstanddisturbance" class="section level4">
 <h4>joinStandDisturbance</h4>
@@ -19519,7 +21326,7 @@ DBH assigned, as these don’t get a DBH measurement when excluded.</p>
 Make map for single plot in most recent survey
 </p>
 <pre class="r"><code>plotTreeMap(from = 2023, to = 2026, plotName = &quot;FRSP-001&quot;)</code></pre>
-<p><img role="img" aria-label src="data:image/png;base64,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" alt width="672" /></p>
+<p><img role="img" aria-label src="data:image/png;base64,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ZnOyxv2LiXrX+VY3nw9U1UK8OjfstxhAK2djAlBaTp1v9Tag6hbi1blhv2UA+sliGQdAaVl1vtXbgKpbiFfnhv1mCigRqc8DNwCUiGTywA0AJSKZPHADQIlIJg/cAFAikskDNwCUiGTywA0AJSKZPHADQIlIJg/cAFAikskDNwCUiGTywA0AJSKZPHADQIlIJg/cAFAikskDNwCUiGTywA0AJSKZPHADQIlIJg/cAFAikskDNwCUiGTywA0AJSKZPHADQIlIJg/cAFAikskDNwCUiGTywA0AJSKZPHADQIlIJg/cAFAikskDNwCUiGTywA0AJSKZPHADQIlIJg/cAFAikskDNwCUiGTywA0AJSKZPHADQIlIJg/cAFAikskDNwCUiGTywA0AJSKZPHADQIlIJg/cAFAikskDNwCUiGTywA0AJSKZPHADQIlIJg/cAFAikskDNwCUiGTywA0AJSKZPHADQIlIJg/cAFAikskDNwCUiGTywA0AJSKZPHADQIlIJg/cAFAikskDNwCUiGTywA0AJSKZPHADQIlIJg/cAFAikskDNwCUiGTywA0AJSKZPHADQIlIJg/cAFAikskDNwCUiGTywA0AJSKZPHADQIlIJg/cAFAikskDNwCUiGTywA0AJSKZPHADQIlIJg/cAFAikskDNwCUiGTywA0AJSKZPHADQIlIJg/cAFAikskDNwCUiGTywA0AJSKZPHADQIlIJg/cAFAikskDNwCUiGTywA0AJSKZPHADQIlIJg/cAFAikskDNwCUiGTywA0AJSKZPHADQIlIJg/cAFAikskDNwCUiGTywA0AJSKZPHADQIlIJg/cAFAikskDNwCUiGTywA0AJSKZPHADQIlIJg/cAFAikskDNwCUiGTywA0AJSKZPHADQIlIJg/cAFAikskDNwCUiGTywA0AJSKZPHADQIlIJg/cAFAikskDNwCUiGTywA0AJSKZPHADQIlIJg/cAFAikskDNwCUiGTywA0AJSKZPHADQIlIJg/cAFAikskDNwCUiGTywA0AJSKZPHADQIlIJg/cAFAikskDNwCUiGTywA0AJSKZPHADQIlIJg/cAFAikskDNwCUiGTywA0AJSKZPHADQIlIJg/cAFAikskDNwCUiGTywA0AJSKZPHCjL6BERNsmzJf7AJSIpBLmy339ACUiolYASkQ0MAAlIhoYgBIRDQxAiYgGBqBERAMDUCKigQEoEdHAAJSIaGAASkQ0MAAlIhoYgBIRDQxAiYgGBqBERAMDUCKigQEoEdHAAJSIaGAASkQ0MAAlIhoYgBIRDQxAiYgGBqBERAMDUCKigQEoEdHAAJSIaGAASkQ0MAAlIhoYgBIRDQxAiYgGBqBERAMDUCKigQEoEdHAAJSIaGAASkQ0MAAlIhoYgBIRDQxAiYgGBqBERAP7/wGxZYCh/GAEhwAAAABJRU5ErkJggg==" alt width="672" /></p>
 <p class="fxn">
 Make map for panel 2 in RICH in most recent survey
 </p>
@@ -21332,7 +23139,7 @@ Summarize structural stage for all parks all years
 <pre class="r"><code>strstg &lt;- sumStrStage()
 print_head(strstg)</code></pre>
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:900px; ">
-<table class=" lightable-classic" style="font-size: 12px; font-family: &quot;Arial Narrow&quot;, &quot;Source Sans Pro&quot;, sans-serif; margin-left: auto; margin-right: auto;">
+<table class=" lightable-classic" style="font-size: 12px; color: black; font-family: &quot;Arial Narrow&quot;, &quot;Source Sans Pro&quot;, sans-serif; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="text-align:left;">
@@ -22189,7 +23996,7 @@ Summarize DBH distribution for all saplings in GEWA for all cycles
 <pre class="r"><code>sap_dist_gewa &lt;- sumSapDBHDist(park = &quot;GEWA&quot;)
 print_head(sap_dist_gewa)</code></pre>
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:900px; ">
-<table class=" lightable-classic" style="font-size: 12px; color: black; font-family: &quot;Arial Narrow&quot;, &quot;Source Sans Pro&quot;, sans-serif; margin-left: auto; margin-right: auto;">
+<table class=" lightable-classic" style="font-size: 12px; font-family: &quot;Arial Narrow&quot;, &quot;Source Sans Pro&quot;, sans-serif; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="text-align:left;">

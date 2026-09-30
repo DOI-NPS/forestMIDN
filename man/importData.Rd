@@ -33,15 +33,12 @@ MIDN database views in specified environment
 This function imports all views in the ANALYSIS schema of the MIDN_Forest backend. Each view
 is added to a VIEWS_MIDN_NCBN environment in your workspace, or to your global environment based on whether
 new_env = TRUE or FALSE. You must have the latest ODBC SQL driver installed for this function to
-work. It can be downloaded from: https://go.microsoft.com/fwlink/?linkid=2168524
+work.
 }
 \examples{
 \dontrun{
 # Import using default settings of local instance, server = 'localhost' and add VIEWS_MIDN_NCBN environment
 importData()
-
-# Import using computer name (# should be real numbers)
-importData(server = "INPNETN-######", new_env = TRUE)
 
 # Import from main database on server
 importData(server = "INP###########\\\\########", instance = "server", new_env = TRUE)
