@@ -1,4 +1,4 @@
-# forestNETN
+# forestMIDN
 This package contains functions that import database views from the MIDN/NCBN forest SQL database and or 
 CSVs in the MIDN/NCBN forest data package and provides functions to query, summarize, and visualize MIDN/NCBN forest data.
 The R package can be installed using `pak::pkg_install('doi-nps/forestNETN')`. Previous archived 
