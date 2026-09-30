@@ -6,3 +6,6 @@ data/
 temp_scripts/
 shapefiles/
 testing_scripts/
+*.svg
+*.zip
+*.png
